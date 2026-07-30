@@ -1,5 +1,4 @@
-# laravel test
-project laravel
+<h1 align="center">project laravel</h1>    
 
 
 ## tutorial
