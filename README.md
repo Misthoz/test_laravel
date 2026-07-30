@@ -1,6 +1,6 @@
-<h1>laravel tes</h1>
+# laravel test
+project laravel
 
-tutorial
 
-
-## pertama :
+## tutorial
+* first
