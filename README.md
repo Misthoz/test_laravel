@@ -37,9 +37,9 @@ setelah itu buka browser dan buka link `http://localhost:8000`.
 ## Daftar Fitur
 fitur yang berhasil dibuat:
 * Relasi database (Kecamatan, Kelurahan, Jalan) dengan Foreign Key yang aman (restrictOnDelete).
-* CRUD (Tambah, Tampil, Ubah, Hapus) & Detail untuk modul Kecamatan.
-* CRUD & Detail untuk modul Kelurahan.
-* CRUD & Detail untuk modul Jalan.
+* CRUD dan Detail kecamatan.
+* CRUD dan Detail kelurahan.
+* CRUD dan Detail jalan.
 * Validasi form di backend dengan pesan error.
 * Pencarian data jalan berdasarkan nama jalan.
 * Filter data jalan berdasarkan kondisi (Baik, Rusak Ringan, Rusak Berat) dan Jenis Permukaan (Aspal, Beton, Paving, Tanah).
