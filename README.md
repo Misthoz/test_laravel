@@ -1,22 +1,17 @@
-referensi readme
+<h1 align="center">Aplikasi pendataan jalan lingkungan</h1>
 
-# Sistem Pendataan Jalan Lingkungan
+Aplikasi sederhana untuk mencatat dan mengelola data jalan lingkungan berdasarkan kelurahan dan kecamatan.
 
-Aplikasi sederhana untuk mencatat dan mengelola data jalan lingkungan berdasarkan kelurahan dan kecamatan. Aplikasi ini dikembangkan untuk memenuhi tugas Paket B.
+## requirment :
+1. php 8.3 
+2. laravel 13
+3. MySQL
 
-## Persyaratan Sistem
-- PHP >= 8.2
-- Laravel 11.x
-- MySQL / MariaDB
-
-## Langkah Instalasi
-1. Clone repository ini.
-2. Jalankan perintah `composer install` untuk menginstal dependensi.
-3. Salin file `.env.example` menjadi `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-4. Atur koneksi database pada file `.env`:
+## langkah-langkah instalasi :
+1. clone repositorynya 
+2. buka cmd di folder projectnya, lalu ketik `composer install` untuk instal dependensinya
+3. salin file `.env.example` setelah itu rename menjadi `.env`
+4. buka file `.env` yang baru saja di rename, edit databasenya di:
    ```env
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
@@ -24,44 +19,44 @@ Aplikasi sederhana untuk mencatat dan mengelola data jalan lingkungan berdasarka
    DB_DATABASE=tes_pkl_jalan
    DB_USERNAME=root
    DB_PASSWORD=
-   ```
-5. Generate application key:
-   ```bash
-   php artisan key:generate
-   ```
-6. Jalankan migrasi dan seeder untuk membuat tabel dan data awal:
-   ```bash
-   php artisan migrate:fresh --seed
-   ```
-
-## Cara Menjalankan Aplikasi
-Jalankan development server lokal dengan perintah:
+5. setelah selesai mengedit file `.env` jalankan perintah berikut:
+```bash
+php artisan key:generate
+```
+6. jalankan migrate dan seeder untuk membuat tabel dan datanya:
+```bash
+php artisan migrate:fresh --seed
+```
+## cara run project :
+buka terminal ketik:
 ```bash
 php artisan serve
 ```
-Buka browser dan akses `http://localhost:8000`.
+setelah itu buka browser dan buka link `http://localhost:8000`.
 
 ## Daftar Fitur
-### Fitur yang berhasil dibuat:
-- [x] Relasi database (Kecamatan, Kelurahan, Jalan) dengan Foreign Key yang aman (restrictOnDelete).
-- [x] CRUD Kecamatan (Create, Read, Update, Delete) + Detail.
-- [x] CRUD Kelurahan + Detail.
-- [x] CRUD Jalan + Detail.
-- [x] Validasi form di backend.
-- [x] Pencarian data jalan berdasarkan nama.
-- [x] Filter data jalan berdasarkan kondisi dan jenis permukaan.
-- [x] Ringkasan data (total jalan, kondisi baik, rusak ringan, rusak berat, total panjang).
-- [x] Desain responsif menggunakan Bootstrap 5.
-- [x] Error handling saat menghapus data induk yang masih memiliki relasi.
-- [x] Pagination.
-- [x] Soft Deletes.
-- [x] Tombol reset pencarian.
+fitur yang berhasil dibuat:
+* Relasi database (Kecamatan, Kelurahan, Jalan) dengan Foreign Key yang aman (restrictOnDelete).
+* CRUD (Tambah, Tampil, Ubah, Hapus) & Detail untuk modul Kecamatan.
+* CRUD & Detail untuk modul Kelurahan.
+* CRUD & Detail untuk modul Jalan.
+* Validasi form di backend dengan pesan error.
+* Pencarian data jalan berdasarkan nama jalan.
+* Filter data jalan berdasarkan kondisi (Baik, Rusak Ringan, Rusak Berat) dan Jenis Permukaan (Aspal, Beton, Paving, Tanah).
+* Fitur Ringkasan (total jalan, jumlah per kondisi, dan perhitungan otomatis total panjang jalan).
+* Desain responsif, rapi, dan konsisten menggunakan Bootstrap 5 (bisa diakses dengan baik di HP maupun Desktop).
+* Penanganan error (Error Handling) dengan pesan yang ramah pengguna saat mencoba menghapus data induk yang masih berelasi.
+* Penanganan data tidak ditemukan (menggunakan `findOrFail` / Halaman 404).
+* Pagination data (10 baris per halaman).
+* Pengurutan data terbaru tampil paling atas (`latest`).
+* Soft Deletes untuk menjaga riwayat data.
+* Tombol reset pencarian.
 
-### Fitur yang belum selesai:
-- Tidak ada.
+## fitur yang belum selesai:
+* tidak ada
 
 ## Catatan
-Aplikasi ini dikembangkan dengan bantuan AI (Antigravity/Claude/Gemini) untuk:
-- Implementasi cepat desain antarmuka menggunakan Bootstrap 5.
-- Melengkapi fungsi CRUD, search, filter, dan perhitungan ringkasan di Controller.
-- Implementasi handling QueryException saat penghapusan foreign key (restrictOnDelete).
+aplikasi ini di bantu oleh AI chatgpt, gemini, dan claude untuk:
+* membantu dalam pembuatan design aplikasi 
+* membantu dalam pembuatan query database
+* membantu dalam pembuatan pencarian 
