@@ -36,7 +36,7 @@ setelah itu buka browser dan buka link `http://localhost:8000`.
 
 ## Daftar Fitur
 fitur yang berhasil dibuat:
-* Relasi database (Kecamatan, Kelurahan, Jalan) dengan Foreign Key yang aman (restrictOnDelete).
+* Relasi database kecamatan, kelurahan, dan jalan dengan Foreign Key yang aman (restrictOnDelete).
 * CRUD dan Detail kecamatan.
 * CRUD dan Detail kelurahan.
 * CRUD dan Detail jalan.
