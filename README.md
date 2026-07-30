@@ -2,12 +2,12 @@
 
 Aplikasi sederhana untuk mencatat dan mengelola data jalan lingkungan berdasarkan kelurahan dan kecamatan.
 
-### requirment
+### requirment :
 1. php 8.3 
 2. laravel 13
 3. MySQL
 
-### langkah-langkah instalasi
+### langkah-langkah instalasi :
 1. clone repositorynya 
 2. buka cmd di folder projectnya, lalu ketik `composer install` untuk instal dependensinya
 3. salin file `.env.example` setelah itu rename menjadi `.env`
