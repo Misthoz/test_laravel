@@ -8,4 +8,4 @@ project laravel
 
 ### instal
 1. install
-2. copy "miaw"
+2. copy `miaw`
